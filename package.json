@@ -1,0 +1,35 @@
+{
+  "name": "aenv",
+  "type": "module",
+  "version": "0.0.1",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Type-safe, versatile environment variable with Arktype",
+  "scripts": {
+    "build": "tsup ./src/index.ts --dts --format esm,cjs --minify"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "tsup": "^8.3.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0",
+    "arktype": "^2.0.0-rc.13"
+  },
+  "dependencies": {},
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*"
+      ]
+    }
+  }
+}
